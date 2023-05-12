@@ -11,7 +11,7 @@ if __name__ == "__main__":
     multiplication = mul(a, b)
     division = div(a, b)
 
-    print(f"{a} + {b} = {total}")
-    print(f"{a} - {b} = {substraction}")
-    print(f"{a} * {b} = {multiplication}")
-    print(f"{a} / {b} = {division}")
+    print("{} + {} = {}".format(a, b, total))
+    print("{} - {} = {}".format(a, b, substraction))
+    print("{} * {} = {}".format(a, b, multiplication))
+    print("{} / {} = {}".format(a, b, division))
