@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-print_reversed_list_integer =
-__import__('3-print_reversed_list_integer').print_reversed_list_integer
+# 3-print_reversed_list_integer.py
 
-my_list = [1, 2, 3]
-print_reversed_list_integer(my_list)
+def print_reversed_list_integer(my_list=[]):
+    if isinstance(my_list, list):
+        my_list.reverse()
+        for i in my_list:
+            print("{:d}".format(i))
