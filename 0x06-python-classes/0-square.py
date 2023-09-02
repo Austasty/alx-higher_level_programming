@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-class square:
+"""Define a class Square."""
+
+
+class Square:
+    """ A square class"""
     pass
