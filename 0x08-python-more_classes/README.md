@@ -1,2 +1,1 @@
-
-this is my README for python classes
+# Project Title: 0x08. Python - More Classes and Objects #
