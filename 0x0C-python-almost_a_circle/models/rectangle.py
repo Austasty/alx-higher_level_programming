@@ -2,6 +2,7 @@
 """ 'Rectangle.py' module """
 from models.base import Base
 
+
 class Rectangle(Base):
     """ a subclass Rectangle that inherits from Base """
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -88,7 +89,7 @@ class Rectangle(Base):
         [print("")for a in range(self.y)]
         for c in range(self.height):
             [print(" ", end="") for b in range(self.y)]
-            [print("#", end="") for d in range (self.width)]
+            [print("#", end="") for d in range(self.width)]
             print("")
 
     def update(self, *args, **kwargs):
@@ -125,7 +126,9 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
     def to_dictionary(self):
+
         """  that returns the dictionary representation of a Rectangle """
         return {
                 "id": self.id,
@@ -137,4 +140,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """ print out the Rectangle representation """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)

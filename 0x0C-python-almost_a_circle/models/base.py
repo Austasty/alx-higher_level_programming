@@ -7,7 +7,9 @@ import csv
 class Base():
     """ base class """
     __nb_objects = 0
+
     def __init__(self, id=None):
+
         """ initializing the base model """
         if id is not None:
             self.id = id
@@ -17,7 +19,11 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ that returns the JSON string representation of list_dictionaries """
+
+        """
+        that returns the JSON string representation
+        of list_dictionaries
+        """
         if list_dictionaries is None or list_dictionaries == []:
             return ("[]")
         else:
@@ -38,7 +44,7 @@ class Base():
     def from_json_string(json_string):
         """ returns the list of the JSON string representation json_string """
         if json_string is None or json_string == "[]":
-            retutn ([])
+            return ([])
         else:
             return json.loads(json_string)
 
