@@ -13,15 +13,15 @@ if __name__ == '__main__':
     from it.
     """
 
-    db_connect = db.connect(host="localhost", port=3306,
+    db_connection = db.connect(host="localhost", port=3306,
                             user=argv[1], passwd=argv[2], db=argv[3])
 
-    with db_connect.cursor() as db_cursor:
-        db_cursor.execute("SELECT cities.id, cities.name, states.name \
+    with db_connection.cursor() as db_pass:
+        db_pass.execute("SELECT cities.id, cities.name, states.name \
                                 FROM cities JOIN states ON cities.state_id \
                                 = states.id ORDER BY cities.id ASC")
-        rows_selected = db_cursor.fetchall()
+        rows = db_pass.fetchall()
 
-    if rows_selected is not None:
-        for row in rows_selected:
+    if rows is not None:
+        for row in rows:
             print(row)
