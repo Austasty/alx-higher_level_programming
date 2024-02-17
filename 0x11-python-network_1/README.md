@@ -1,1 +1,1 @@
-#All Solutions to tasks on Python - Network #1
+# All my Solutions to tasks on Python - Network #1
